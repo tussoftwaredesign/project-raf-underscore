@@ -13,13 +13,14 @@ Legacy tools, on the other hand, are limited by their flat, bounded interfaces. 
 
 # Design
 
+![SCR-20221017-wsk](https://user-images.githubusercontent.com/52125687/196300040-8924db22-a947-43b5-bc49-d6426ef3d6a1.png)
+
+
 The challenge will be to make this intuitive within a virtual reality landscape. The block method is one that I think will work the best rather than a spatial enviroment as seen with Obsidians workflow.
 
 A block based system will also make editing and reorganizing files much more simpler than finding them withing a web of links.
 
 ### Limitations
-
----
 
 Oculus keyboard tracking only supports two keyboards as of now, being the logitech and the apple magic keyboard. This will lead to problems as the ease of typing with a keyboard will be lost and the user will have to type withing the actual app, which could be slow and non useful.
 
@@ -55,3 +56,17 @@ The user will then be able to edit the pages within the mixed reality experience
 1. Exporting
 
 The user will have the ability to export in the following ways. One way is just exporting all the information to a markdown file to be pasted into a github readme or something similar. Another way will be to save the infromation as a sort of power point presentation, wherby the user will be able to go through each zetell one by one. They could also just save the information, so that they can use it as their state for another time.
+
+# Additional Thoughts
+
+Within Unity, you can connect items like Google Drive. This boosts the data visualization side of things by making it easier to load csv files. The data might then be interpreted into the VR landscape using applicable notations. 
+
+Yes, technologies such as Notion have database capabilities, but the ease of development and integration with other software such as sheets is significantly greater.
+
+![image](https://user-images.githubusercontent.com/52125687/196300294-dc638ce8-206a-4fe4-b25c-e62f2b5e4be6.png)
+
+Within the virtual reality scene, data such as the one displayed above could be interpreted into a variety of ways. Big data may be of interest here, as massive data such as networking data or population counting may be quite useful. 
+
+A link between Unity, Google Drive, Sheets, and Maps might be used to visualize population zones around a country/area and see where the density is too high or too low. Another option is to use a virtual reality headset to track an item's delivery in real time.
+
+
