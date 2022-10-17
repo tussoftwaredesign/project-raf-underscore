@@ -69,4 +69,7 @@ Within the virtual reality scene, data such as the one displayed above could be 
 
 A link between Unity, Google Drive, Sheets, and Maps might be used to visualize population zones around a country/area and see where the density is too high or too low. Another option is to use a virtual reality headset to track an item's delivery in real time.
 
+# Some More Thoughts
+
+Visulize the collage classrooms within the zettel landscape. One could be able to see which lectures will be in which rooms when, how many classes they have, what classes they teach and which students they teach. 
 
