@@ -12,3 +12,9 @@ Thesis Submission (40%): 17th April 2023
 
 ## 8/11/2022
 - Prepare slides for Demo 1. Two slides on context & rationale. Slide show what the overall architecture may look like. Live demo of any technical progress. Slide on next steps.
+
+## Project options
+Displaying information about unknown objects in the metaverse using machine learning.
+
+Displaying information about unknown objects in the realworld using a mixed reality headset. (we don't have MR headset). How do we mimick that using the tools that we have?
+
