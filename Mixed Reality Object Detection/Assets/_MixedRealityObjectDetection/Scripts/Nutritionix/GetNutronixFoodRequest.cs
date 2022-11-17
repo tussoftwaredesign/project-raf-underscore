@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using Nutritionix;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -15,25 +16,26 @@ public class GetNutritionixFoodRequest : MonoBehaviour
     private readonly string _timezone = "US/Eastern";
     private readonly string _locale = "en_US";
     private readonly string _contentType = "application/json";
-
+    
+    public Food food;
+    
     FoodDataController data;
-
     public class GetFoodRequest
     {
         public string query { get; set; }
         public string timezone { get; set; } 
     }
     
-    public void GetFood()
+    public void GetFood(string query, TextMeshProUGUI text)
     {
-        StartCoroutine(MakeFoodRequest());
+        StartCoroutine(MakeFoodRequest(query, text));
     }
-
-    IEnumerator MakeFoodRequest()
+    
+    IEnumerator MakeFoodRequest(string query, TextMeshProUGUI text)
     {
         var bodyRequest = new GetFoodRequest()
         {
-            query = "1 cup of milk",
+            query = query,
             timezone = _timezone
         };
 
@@ -68,9 +70,32 @@ public class GetNutritionixFoodRequest : MonoBehaviour
                     
                     foreach (var item in data.Foods)
                     {
-                        Debug.Log(item.FoodName);
+
+                        text.text = "Food Name: " + UppercaseFirst(item.FoodName) +
+                                                                   "\n" + "Calories: " +  item.Calories +
+                                                                   "\n" + "Total Fat: " + item.TotalFat +
+                                                                   "\n" + "Saturated Fat: " + item.SaturatedFat +
+                                                                   "\n" + "Cholesterol: " + item.Cholesterol +
+                                                                   "\n" + "Sodium: " + item.Sodium +
+                                                                   "\n" + "Total Carbohydrate: " + item.TotalCarbohydrate +
+                                                                   "\n" + "Dietary Fiber: " + item.DietaryFiber +
+                                                                   "\n" + "Sugars: " + item.Sugars +
+                                                                   "\n" + "Protein: " + item.Protein +
+                                                                   "\n" + "Potassium: " + item.Potassium;
+
+
                     }
                     break;
+            }
+            
+            string UppercaseFirst(string s){
+                if (string.IsNullOrEmpty(s))
+                {
+                    return string.Empty;
+                }
+                char[] a = s.ToCharArray();
+                a[0] = char.ToUpper(a[0]);
+                return new string(a);
             }
         }
     }

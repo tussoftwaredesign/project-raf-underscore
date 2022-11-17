@@ -6,71 +6,72 @@ using System.Globalization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using UnityEngine;
-
-public class AltMeasure
+    [Serializable]
+    public class AltMeasure
     {
         [JsonProperty("serving_weight", NullValueHandling = NullValueHandling.Ignore)]
-        public double? ServingWeight;
+        public string ServingWeight;
 
         [JsonProperty("measure", NullValueHandling = NullValueHandling.Ignore)]
         public string Measure;
 
         [JsonProperty("seq", NullValueHandling = NullValueHandling.Ignore)]
-        public int? Seq;
+        public string Seq;
 
         [JsonProperty("qty", NullValueHandling = NullValueHandling.Ignore)]
-        public int? Qty;
+        public string Qty;
     }
 
+    [Serializable]
     public class Food
     {
         [JsonProperty("food_name", NullValueHandling = NullValueHandling.Ignore)]
         public string FoodName;
-
+        
         [JsonProperty("brand_name", NullValueHandling = NullValueHandling.Ignore)]
-        public object BrandName;
+        public string BrandName;
 
         [JsonProperty("serving_qty", NullValueHandling = NullValueHandling.Ignore)]
-        public int? ServingQty;
+        public string ServingQty;
 
         [JsonProperty("serving_unit", NullValueHandling = NullValueHandling.Ignore)]
         public string ServingUnit;
 
         [JsonProperty("serving_weight_grams", NullValueHandling = NullValueHandling.Ignore)]
-        public int? ServingWeightGrams;
+        public string ServingWeightGrams;
 
         [JsonProperty("nf_calories", NullValueHandling = NullValueHandling.Ignore)]
-        public int? NfCalories;
+        public string Calories;
 
         [JsonProperty("nf_total_fat", NullValueHandling = NullValueHandling.Ignore)]
-        public double? NfTotalFat;
+        public string TotalFat;
 
         [JsonProperty("nf_saturated_fat", NullValueHandling = NullValueHandling.Ignore)]
-        public double? NfSaturatedFat;
+        public string SaturatedFat;
 
         [JsonProperty("nf_cholesterol", NullValueHandling = NullValueHandling.Ignore)]
-        public double? NfCholesterol;
+        public string Cholesterol;
 
         [JsonProperty("nf_sodium", NullValueHandling = NullValueHandling.Ignore)]
-        public double? NfSodium;
+        public string Sodium;
 
         [JsonProperty("nf_total_carbohydrate", NullValueHandling = NullValueHandling.Ignore)]
-        public double? NfTotalCarbohydrate;
+        public string TotalCarbohydrate;
 
         [JsonProperty("nf_dietary_fiber", NullValueHandling = NullValueHandling.Ignore)]
-        public int? NfDietaryFiber;
+        public string DietaryFiber;
 
         [JsonProperty("nf_sugars", NullValueHandling = NullValueHandling.Ignore)]
-        public double? NfSugars;
+        public string Sugars;
 
         [JsonProperty("nf_protein", NullValueHandling = NullValueHandling.Ignore)]
-        public double? NfProtein;
+        public string Protein;
 
         [JsonProperty("nf_potassium", NullValueHandling = NullValueHandling.Ignore)]
-        public double? NfPotassium;
+        public string Potassium;
 
         [JsonProperty("nf_p", NullValueHandling = NullValueHandling.Ignore)]
-        public double? NfP;
+        public string P;
 
         [JsonProperty("full_nutrients", NullValueHandling = NullValueHandling.Ignore)]
         public List<FullNutrient> FullNutrients;
@@ -97,10 +98,10 @@ public class AltMeasure
         public Metadata Metadata;
 
         [JsonProperty("source", NullValueHandling = NullValueHandling.Ignore)]
-        public int? Source;
+        public string Source;
 
         [JsonProperty("ndb_no", NullValueHandling = NullValueHandling.Ignore)]
-        public int? NdbNo;
+        public string NdbNo;
 
         [JsonProperty("tags", NullValueHandling = NullValueHandling.Ignore)]
         public Tags Tags;
@@ -115,7 +116,7 @@ public class AltMeasure
         public object Lng;
 
         [JsonProperty("meal_type", NullValueHandling = NullValueHandling.Ignore)]
-        public int? MealType;
+        public string MealType;
 
         [JsonProperty("photo", NullValueHandling = NullValueHandling.Ignore)]
         public Photo Photo;
@@ -133,21 +134,24 @@ public class AltMeasure
         public object TagId;
     }
 
+    [Serializable]
     public class FullNutrient
     {
         [JsonProperty("attr_id", NullValueHandling = NullValueHandling.Ignore)]
-        public int? AttrId;
+        public string AttrId;
 
         [JsonProperty("value", NullValueHandling = NullValueHandling.Ignore)]
-        public double? Value;
+        public string Value;
     }
 
+    [Serializable]
     public class Metadata
     {
         [JsonProperty("is_raw_food", NullValueHandling = NullValueHandling.Ignore)]
         public bool? IsRawFood;
     }
 
+    [Serializable]
     public class Photo
     {
         [JsonProperty("thumb", NullValueHandling = NullValueHandling.Ignore)]
@@ -160,6 +164,7 @@ public class AltMeasure
         public bool? IsUserUploaded;
     }
 
+    [Serializable]
     public class Tags
     {
         [JsonProperty("item", NullValueHandling = NullValueHandling.Ignore)]
@@ -172,12 +177,13 @@ public class AltMeasure
         public string Quantity;
 
         [JsonProperty("food_group", NullValueHandling = NullValueHandling.Ignore)]
-        public int? FoodGroup;
+        public string FoodGroup;
 
         [JsonProperty("tag_id", NullValueHandling = NullValueHandling.Ignore)]
-        public int? TagId;
+        public string TagId;
     }
 
+    [Serializable]
     public class FoodDataController
     {
         [JsonProperty("foods", NullValueHandling = NullValueHandling.Ignore)]
