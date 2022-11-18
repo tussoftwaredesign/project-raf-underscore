@@ -212,3 +212,5 @@ dist
 *.meta
 #But not source file with postfix. which is everything but a folder
 !*.*.meta
+Mixed Reality Object Detection/.DS_Store
+.DS_Store
